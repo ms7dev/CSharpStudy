@@ -27,7 +27,9 @@ namespace TextEditor
             InitializeComponent();
             butOpenFile.Click += butOpenFile_Click;
             butSaveFile.Click += butSave_Click;
+            butSelectFile.Click += butSelectFile_Click;
             fldContent.TextChanged += fldContent_TextChanged;
+            numFont.ValueChanged += numFont_ValueChanged;
         }
 
         #region events
@@ -68,6 +70,22 @@ namespace TextEditor
         public event EventHandler FileSaveClick;
         public event EventHandler ContentChanged;
         #endregion
+
+        private void butSelectFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Text files|*.txt|All files|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                fldFilePath.Text = dlg.FileName;
+                if (FileOpenClick != null) FileOpenClick(this, EventArgs.Empty);
+            }
+        }
+
+        private void numFont_ValueChanged(object sender, EventArgs e)
+        {
+            fldContent.Font = new Font("Calibri", (float)numFont.Value);
+        }
 
         
     }
