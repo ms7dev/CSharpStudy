@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using TextEditor.BL.Interfaces;
 
 namespace TextEditor.BL
 {
-    public class FileManager
+    public class FileManager : IFileManager
     {
         private readonly Encoding _defaultEncoding = Encoding.GetEncoding(1251);
 

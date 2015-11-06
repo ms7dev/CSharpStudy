@@ -7,19 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TextEditor.Interfaces;
 
 namespace TextEditor
 {
-    public interface IMainForm
-    {
-        string FilePath { get; }
-        string Content { get; set; }
-        void SetSymbolCount(int count);
-        event EventHandler FileOpenClick;
-        event EventHandler FileSaveClick;
-        event EventHandler ContentChanged;
-    }
-
     public partial class MainForm : Form, IMainForm
     {
         public MainForm()
@@ -86,7 +77,5 @@ namespace TextEditor
         {
             fldContent.Font = new Font("Calibri", (float)numFont.Value);
         }
-
-        
     }
 }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TextEditor.Interfaces;
 
 namespace TextEditor
 {
-    public class MessageService
+    public class MessageService : IMessageService
     {
         public void ShowMessage(string message)
         {

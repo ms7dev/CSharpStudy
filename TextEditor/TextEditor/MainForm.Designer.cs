@@ -107,7 +107,7 @@
             this.numFont.Size = new System.Drawing.Size(120, 20);
             this.numFont.TabIndex = 5;
             this.numFont.Value = new decimal(new int[] {
-            11,
+            12,
             0,
             0,
             0});
@@ -117,6 +117,7 @@
             this.fldContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.fldContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fldContent.Location = new System.Drawing.Point(15, 101);
             this.fldContent.Multiline = true;
             this.fldContent.Name = "fldContent";
