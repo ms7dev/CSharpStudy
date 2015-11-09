@@ -11,7 +11,7 @@ using TextEditor.Interfaces;
 
 namespace TextEditor
 {
-    public partial class MainForm : Form, IMainForm
+    public partial class MainForm : Form, IMainForm<string>
     {
         public MainForm()
         {

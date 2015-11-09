@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TextEditor.Interfaces
 {
-    public interface IMainForm
+    public interface IMainForm<T>
     {
-        string FilePath { get; }
+        T FilePath { get; }
         string Content { get; set; }
         void SetSymbolCount(int count);
         event EventHandler FileOpenClick;

@@ -8,7 +8,7 @@ using TextEditor.BL.Interfaces;
 
 namespace TextEditor.BL
 {
-    public class FileManager : IFileManager
+    public class FileManager : IFileManager<string>
     {
         private readonly Encoding _defaultEncoding = Encoding.GetEncoding(1251);
 
